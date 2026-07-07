@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO & Accessibility Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PracWiz Solutions - Relax and breathe easy. We simplify your operations by automating workflows, cloud infrastructure, and repetitive tasks to restore business efficiency.">
+  <meta name="keywords" content="workflow automation, operational relief, software development, cloud systems, serverless, database integration, digital systems, business efficiency">
+  
+  <title>PracWiz Solutions | Reclaim Your Workflow & Peace of Mind</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Waves for Soothing Tech Accent -->
+  <canvas id="canvas-wave"></canvas>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container navbar">
+      <!-- Inlined Vector Logo for Perfect Responsive Rendering -->
+      <a href="#" class="nav-logo" aria-label="PracWiz Solutions Homepage">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="430 260 740 310" width="100%" height="100%">
+          <defs>
+            <style>
+              .text-pracwiz {
+                font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-weight: 800;
+                font-size: 170px;
+                fill: #003366;
+                text-anchor: middle;
+              }
+              .text-solutions {
+                font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-weight: 400;
+                font-size: 64px;
+                fill: #003366;
+                text-anchor: middle;
+                font-variant: small-caps;
+                text-transform: lowercase;
+              }
+            </style>
+          </defs>
+          <g transform="translate(800, 450)">
+            <text y="-25" class="text-pracwiz" textLength="720" lengthAdjust="spacing">PracWiz</text>
+            <text y="95" class="text-solutions" textLength="720" lengthAdjust="spacing">solutions</text>
+          </g>
+        </svg>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#calculator">Peace of Mind Tool</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#contact" class="nav-cta">Talk to an Expert</a>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="margin-right: 4px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v4l3 3"></path>
+            </svg>
+            Operational Relief
+          </div>
+          <h1>Breathe easy.<br>We simplify your operations.</h1>
+          <p class="hero-subtitle">
+            If repetitive tasks, fragile scripts, and messy spreadsheets are cluttering your team's day, you deserve a break. PracWiz Solutions builds clean, automated systems that turn complexity into calm.
+          </p>
+          <div class="hero-ctas">
+            <a href="#calculator" class="btn-primary">Try Peace Tool</a>
+            <a href="#contact" class="btn-secondary">Let's Lighten the Load</a>
+          </div>
+        </div>
+        
+        <!-- Hero Visual (Interactive Calm Card) -->
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="card-peace-badge">DAILY RECOVERY</div>
+            <h3 class="card-title">Average Time Reclaimed</h3>
+            <p>Our custom workflows take the load off your teams so they can focus on high-impact work.</p>
+            <div class="card-stat">
+              18.5 <span>hours / week</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
+              Equivalent to saving ~120 workdays every year.
+            </p>
+          </div>
+          <!-- Background accent glow -->
+          <div class="card-glow-bg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works section -->
+    <section class="services" id="how-it-works">
+      <div class="container section-padding">
+        <div class="section-header text-center">
+          <h2>Your Path to Calm Operations</h2>
+          <p>We analyze your team's daily friction, build the digital bridges to automate them, and monitor everything so you can sleep easy.</p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Step 1 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12h20M12 2v20"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3>1. Map the Friction</h3>
+            <p>We trace your team's repeating tasks, double entries, and data bottlenecks to isolate exactly what is wasting hours.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>2. Build the Bridges</h3>
+            <p>We construct robust API pipelines, automated schedulers, and intuitive custom dashboards using reliable modern stacks.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>3. Reclaim Your Calm</h3>
+            <p>Watch operations run automatically in the background. Sit back, breathe, and put your energy where it matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Capabilities -->
+    <section class="services-details" id="services" style="background-color: var(--bg-card);">
+      <div class="container section-padding">
+        <div class="section-header text-center">
+          <h2>Capabilities Tailored for Operational Relief</h2>
+          <p>We design custom tech structures that relieve daily friction and ensure bulletproof business workflows.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Custom Web & Tool Development</h3>
+            <p>Clean, lightweight internal web tools and customer portals that solve specific operational demands, built with elegant Vanilla CSS and HTML logic.</p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3>Bulletproof API & Data Bridges</h3>
+            <p>Connect your CRMs, payment gateways, databases, and sheets. Data flows where it belongs automatically, eliminating human transcription errors.</p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3>Resilient Cloud Architectures</h3>
+            <p>Deploy to secure cloud infrastructures that scale dynamically. We monitor your services 24/7 so you never get interrupted by sudden server failures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Reclaimed Hours Calculator -->
+    <section class="calculator-section" id="calculator">
+      <div class="container section-padding">
+        <div class="section-header text-center">
+          <h2>Find Your Breathing Room</h2>
+          <p>Select your team's primary operational headaches below and slide to see how much time PracWiz can save your business weekly.</p>
+        </div>
+
+        <div class="calculator-wrapper">
+          <!-- Form Input Side -->
+          <div class="calculator-form-side">
+            <h3>Choose your operational friction:</h3>
+            <div class="pain-point-group">
+              <div class="pain-item active" data-pain="manual-entry">
+                <div class="pain-checkbox" aria-hidden="true"></div>
+                <div class="pain-content">
+                  <h4>Manual Data Entry</h4>
+                  <p>Copying/typing text, customer details, or invoices between platforms.</p>
+                </div>
+              </div>
+
+              <div class="pain-item" data-pain="reporting">
+                <div class="pain-checkbox" aria-hidden="true"></div>
+                <div class="pain-content">
+                  <h4>Repetitive PDF/CSV Reporting</h4>
+                  <p>Compiling metrics and downloading reports manually every week.</p>
+                </div>
+              </div>
+
+              <div class="pain-item active" data-pain="downtime">
+                <div class="pain-checkbox" aria-hidden="true"></div>
+                <div class="pain-content">
+                  <h4>System Outages & Maintenance</h4>
+                  <p>Troubleshooting server drops, visual glitches, and database crashes.</p>
+                </div>
+              </div>
+
+              <div class="pain-item" data-pain="double-entry">
+                <div class="pain-checkbox" aria-hidden="true"></div>
+                <div class="pain-content">
+                  <h4>Double CRM Handling</h4>
+                  <p>Syncing spreadsheets manually because systems don't speak to each other.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider overhead hours -->
+            <div class="slider-group">
+              <div class="slider-label">
+                <label for="hours-slider">Weekly operational overhead per employee:</label>
+                <div><span id="hours-val">25</span> hours</div>
+              </div>
+              <input type="range" min="5" max="40" value="25" class="input-slider" id="hours-slider">
+            </div>
+          </div>
+
+          <!-- Result output side -->
+          <div class="calculator-results-side">
+            <h3 style="font-weight: 600;">Time Recovered by Automation</h3>
+            <div class="result-number" id="result-hours">0</div>
+            <div class="result-label">hours reclaimed / week</div>
+            
+            <div class="result-gauge" aria-hidden="true">
+              <div class="gauge-fill" id="gauge-fill"></div>
+            </div>
+
+            <p class="result-desc" id="result-label">
+              Reclaims ~0 working days/year
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 1.5rem; max-width: 300px;">
+              Give your team the breathing room they need to perform creative, stress-free work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Request Form -->
+    <section class="contact" id="contact">
+      <div class="container section-padding contact-grid">
+        <div class="contact-info">
+          <h2>Let's lighten the load.</h2>
+          <p>
+            Ready to reclaim your workflow? Tell us what manual tasks are holding your operations back, and we will outline a custom solution that automates the friction away.
+          </p>
+          
+          <div class="contact-card">
+            <div class="contact-card-icon" aria-hidden="true">✉</div>
+            <div class="contact-card-text">
+              <h4>Email us directly</h4>
+              <p><a href="mailto:hello@pracwiz.solutions">hello@pracwiz.solutions</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon" aria-hidden="true">☼</div>
+            <div class="contact-card-text">
+              <h4>Our Promise</h4>
+              <p>No high-pressure sales. Just clear technical designs to automate your headache.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glassmorphic Form -->
+        <div class="contact-form">
+          <form id="consultation-form" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" class="form-input" placeholder=" " required>
+              <label for="name" class="form-label">Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" class="form-input" placeholder=" " required>
+              <label for="email" class="form-label">Work Email</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" class="form-input" placeholder=" " required></textarea>
+              <label for="message" class="form-label">What operational task frustrates you the most?</label>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit" id="submit-btn">Send My Operational Assessment</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- Inline logo overriding colors for contrast -->
+      <a href="#" class="footer-logo" aria-label="PracWiz Solutions Footer Logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="430 260 740 310" width="100%" height="100%">
+          <g transform="translate(800, 450)">
+            <text y="-25" class="text-pracwiz" textLength="720" lengthAdjust="spacing">PracWiz</text>
+            <text y="95" class="text-solutions" textLength="720" lengthAdjust="spacing">solutions</text>
+          </g>
+        </svg>
+      </a>
+
+      <ul class="footer-links">
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#calculator">Peace of Mind Tool</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p class="footer-copyright" id="copyright">
+        &copy; 2026 PracWiz Solutions. Reclaim your workflow. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script logic -->
+  <script src="script.js"></script>
+</body>
+</html>
