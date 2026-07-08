@@ -1,0 +1,19 @@
+# PracWiz Solutions
+
+PracWiz Solutions specializes in building lightweight, reliable, and cost-effective digital automation workflows and systems tailored exclusively for boutique and solo practitioners in highly regulated fields.
+
+## Core Audience & Mission
+We help independent professionals who are overwhelmed by manual processes and system bottlenecks reclaim their time:
+- **Pharmacists:** Automating operational logging and administrative tasks while maintaining strict data safety.
+- **Lawyers:** Setting up secure, encrypted document pipelines and onboarding flows.
+- **Auditors:** Constructing robust data ingestion bridges, secure reports, and transaction logs.
+- **Architects:** Automating project tracking, asset delivery, and blueprint protection.
+
+## Services & Expertise
+1. **Workflow Automation & API Integration:** Syncing CRMs, document repositories, and sheets to eliminate manual data transcription.
+2. **Custom Web & Utility Development:** Building light, fast, and simple user portals or tools with elegant, responsive frontends.
+3. **Resilient Cloud Architectures:** Hosting static pages (GitHub Pages) and serverless backends (Cloudflare Workers) to ensure $0/month running costs and 100% uptime.
+
+## Contacts & Links
+- **Homepage:** https://pracwiz.com
+- **Inquiries & Support:** contact@pracwiz.com
