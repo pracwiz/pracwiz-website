@@ -17,22 +17,21 @@ This roadmap details the precise implementation steps, settings, and code requir
 7. Click **Create Address**, set the custom address to `contact`, and select the destination address as `pracwiz.solutions@gmail.com`.
 8. Click **Save**. If prompted to configure DNS records (MX and TXT records for email routing), click **Add records automatically**.
 
----
+## Phase 2: Link Contact Form via Cloudflare Worker
+**Goal:** Deploy a $0-cost serverless Cloudflare Worker to process submissions and securely email them to `pracwiz.solutions@gmail.com` using assets on hand.
 
-## Phase 2: Link Contact Form to Gmail
-**Goal:** Connect the frontend form in [index.html](file:///Users/pracwiz/Documents/antigravity/dazzling-euclid/index.html) to submit inquiries directly to `pracwiz.solutions@gmail.com`.
-
-### Recommendation: Web3Forms (No-code / Fast Integration)
-Web3Forms is a free, secure form processor for static websites. You don't need any server-side code.
-
-#### Implementation Steps:
-1. Obtain a free Access Key from [Web3Forms](https://web3forms.com/) (delivered instantly via email).
-2. Modify the contact form in [index.html](file:///Users/pracwiz/Documents/antigravity/dazzling-euclid/index.html) to post to `https://api.web3forms.com/submit`.
-3. Add a hidden input field containing the access key:
-   ```html
-   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-   ```
-4. Update `script.js` to handle form submission via standard `fetch`, display a success state to the user without reloading the page, and clear the input values.
+### Steps:
+1. **Initialize the Worker:**
+   - Create a worker directory (e.g., `Technology/form-handler`).
+   - Create a `wrangler.toml` file mapping the worker name and compatibility date.
+2. **Write the Worker Script:**
+   - The worker script intercepts `POST` requests, validates inputs (Full Name, Email, and Message), and dispatches the contents to `contact@pracwiz.com` (which automatically forwards to `pracwiz.solutions@gmail.com` via Cloudflare Email Routing).
+   - To send the email, we will use **Mailchannels** (a transactional email service integrated natively and for free with Cloudflare Workers, requiring no API keys) or **Resend API** (free tier of 3,000 emails/month).
+3. **Deploy the Worker:**
+   - Run `npx wrangler deploy` to push the worker to your Cloudflare account.
+4. **Modify Frontend Form:**
+   - Update `script.js` to send form inputs as a JSON payload to the newly deployed Worker URL.
+   - Display a clean transition and success notification to the user upon submission.
 
 ---
 

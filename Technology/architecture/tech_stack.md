@@ -38,24 +38,16 @@ This document details the approved technical architecture and stack components f
   - Keeps the professional brand aesthetic while leveraging a standard Gmail account to manage incoming responses.
 
 ---
-
 ## 4. Contact Form Processing
-Since GitHub Pages is a static host, we cannot execute backend code (like Node.js or Python) directly. We have two primary paths:
+Since GitHub Pages is a static host, we cannot execute backend code (like Node.js or Python) directly.
 
-### Option A: Cloudflare Workers (Recommended)
-- **Mechanism:** Deploy a tiny, serverless JavaScript function on Cloudflare Workers.
-- **Cost:** Free (up to 100,000 requests/day).
+### Selected Primary Solution: Cloudflare Workers
+- **Mechanism:** Deploy a serverless JavaScript function (Worker) on your Cloudflare account to handle the HTTP POST from the contact form and email it directly to `pracwiz.solutions@gmail.com`.
+- **Cost:** **$0** (Cloudflare's Free Tier includes **100,000 requests per day**, which is more than sufficient).
 - **Advantages:**
-  - 100% self-hosted on your Cloudflare account.
-  - Completely hides your destination email address (`pracwiz.solutions@gmail.com`) from public frontend code, preventing email harvesting and spam.
-  - Offers infinite flexibility to forward to email APIs (like Mailgun, SendGrid), Discord/Telegram channels, or Google Sheets.
-
-### Option B: Web3Forms or Formspree (Low-code alternative)
-- **Mechanism:** Post form data directly to a third-party gateway API URL.
-- **Cost:** Free (up to 250 submissions/month for Web3Forms).
-- **Advantages:**
-  - Zero serverless configuration required.
-  - Easily integrated with a single `action` attribute in the HTML form.
+  - **Asset Maximization:** Fully utilizes your existing Cloudflare setup. No new accounts or third-party service dependencies (like Formspree or Web3Forms) are needed.
+  - **Privacy:** Keeps your destination Gmail address private and hidden from public client-side JavaScript, preventing spam bots from harvesting the email.
+  - **Flexibility:** If requirements change, the Worker can easily be updated to log inputs to Google Sheets, databases, or send instant Slack/Discord/Telegram alerts.
 
 ---
 
