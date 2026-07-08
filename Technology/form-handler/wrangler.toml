@@ -1,0 +1,8 @@
+name = "pracwiz-form-handler"
+main = "src/index.js"
+compatibility_date = "2024-03-01"
+
+# Bind Cloudflare Email Routing to let the Worker send emails
+send_email = [
+  { name = "EMAIL_ROUTER" }
+]
