@@ -192,7 +192,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
       animationFrameId = requestAnimationFrame(animateWaves);
     }
-
     animateWaves();
   }
+
+  // --- 4. Consultation Form Submission ---
+  const consultationForm = document.getElementById('consultation-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (consultationForm && submitBtn) {
+    consultationForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      // Disable button & change text to show sending status
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending My Assessment...';
+
+      try {
+        const response = await fetch('https://pracwiz-form-handler.pracwiz-solutions-cloudflare.workers.dev', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          // Display success state inside form
+          consultationForm.innerHTML = `
+            <div class="form-success-state" style="text-align: center; padding: 2rem 0; animation: fadeIn 0.5s ease;">
+              <div style="font-size: 3rem; margin-bottom: 1rem; color: #10b981;">✓</div>
+              <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: #003366; margin-bottom: 0.5rem;">Your assessment request is sent.</h3>
+              <p style="color: #475569; line-height: 1.6;">Breathe easy. We will review your bottleneck details and respond with a custom design within 24 hours.</p>
+            </div>
+          `;
+        } else {
+          throw new Error(data.error || 'Failed to submit form');
+        }
+      } catch (err) {
+        console.error('Submission error:', err);
+        alert('We encountered a problem sending your inquiry. Please email us directly at contact@pracwiz.com.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    });
+  }
 });
+

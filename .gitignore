@@ -6,3 +6,7 @@ walkthrough.md
 .env
 .env.local
 .env.*
+.wrangler/
+.wrangler
+node_modules/
+node_modules
